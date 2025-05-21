@@ -1,26 +1,75 @@
 @import "tailwindcss";
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-header-footer-bg: #FEC60E;
+  --color-background: #FBEDE4;
+  --color-card-bg: #FFFFFF;
+  --color-accent: #FF8B40;
+  --color-text: #000000;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+.content {
+  min-height: calc(100vh - 64px - 92px);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem; /* округлые углы */
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-accent:hover {
+  background-color: #e3772e; /* чуть темнее */
+}
+
+header, footer, nav {
+  background-color: var(--color-header-footer-bg);
+  color: #000;
+}
+
+.card-white {
+  background-color: var(--color-card-bg);
+  color: var(--color-text);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+}
+
+.input-search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-search-wrapper input[type="text"] {
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  background-color: var(--color-card-bg);
+  color: var(--color-text);
+  box-shadow: none;
+}
+
+.input-search-wrapper input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+.input-search-wrapper svg {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  fill: var(--color-text);
+  pointer-events: none;
 }

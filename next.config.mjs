@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  output: 'export', // чтобы генерировать статичный сайт
+  basePath: '/ReactRecips', // если сайт будет в папке репозитория
+  // trailingSlash: true, // если хочешь, чтобы URL оканчивались слэшем
+}
 
-export default nextConfig;
+module.exports = nextConfig
