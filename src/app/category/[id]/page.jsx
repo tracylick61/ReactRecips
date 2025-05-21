@@ -21,7 +21,7 @@ export default function CategoryPage() {
 
     return (
         <div className="p-4">
-            <Link href="/" className="tn-accent block mb-4">← Go Back</Link>
+            <Link href="/" className="text block mb-4">← Go Back</Link>
             {!meals.length ? <Preloader /> : <MealList meals={meals} />}
         </div>
     );

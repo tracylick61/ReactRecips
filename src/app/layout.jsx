@@ -6,7 +6,7 @@ export const metadata = {
   title: "My project recipes",
   description: "Tasty and simple recipes on every day",
   icons: {
-    icon: "/logo.png",
+    icon: "/logo1.png",
   },
 };
 
